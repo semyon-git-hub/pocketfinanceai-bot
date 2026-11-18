@@ -13905,9 +13905,6 @@ async def receipt_photo_handler(
             # Убираем мелкий шум
             image = image.filter(ImageFilter.SHARPEN)
 
-        pytesseract.pytesseract.tesseract_cmd = (
-            r"C:\Program Files\Tesseract-OCR\tesseract.exe"
-        )
 
         recognized_text = await asyncio.to_thread(
             pytesseract.image_to_string,
