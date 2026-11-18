@@ -3,6 +3,7 @@ aiohttp
 requests
 pytz
 pytesseract
+Pillow
 fastapi
 uvicorn
 python-multipart
