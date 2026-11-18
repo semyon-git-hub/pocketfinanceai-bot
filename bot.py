@@ -13906,6 +13906,8 @@ async def receipt_photo_handler(
             image = image.filter(ImageFilter.SHARPEN)
 
 
+        pytesseract.pytesseract.tesseract_cmd = "tesseract"
+        
         recognized_text = await asyncio.to_thread(
             pytesseract.image_to_string,
             image,
